@@ -1,0 +1,9 @@
+<div class="new-pub-link">{{#link-to 'pubs.new'}}Add a new pub{{/link-to}}</div>
+
+{{outlet}}
+
+<br>
+<br>
+{{#each pub in model}}
+  <div class="each-pub">{{pub.name}} : {{pub.body}}  <img {{bind-attr src=pub.image}} /> </div>
+  {{/each}}
